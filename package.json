@@ -1,0 +1,15 @@
+{
+  "name": "myai-cloudflare",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0",
+    "wrangler": "^4.50.0"
+  }
+}

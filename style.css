@@ -1,0 +1,37 @@
+*{box-sizing:border-box}
+html,body,#root{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+body{background:#0b1020;color:#e8ecf7}
+button,textarea,select{font:inherit}
+.shell{display:flex;min-height:100vh;background:#0b1020}
+.sidebar{width:250px;border-right:1px solid #222a3d;padding:18px 14px;display:flex;flex-direction:column;background:#0e1424}
+.brand{font-size:22px;font-weight:800;display:flex;gap:10px;align-items:center;margin:4px 8px 22px}
+.logo,.welcome-icon{color:#8b7cff}
+.newchat{width:100%;padding:12px;border:1px solid #343d55;border-radius:12px;background:#171f33;color:#fff;cursor:pointer}
+.nav{width:100%;text-align:left;border:0;background:transparent;color:#aeb7ca;padding:11px 12px;border-radius:10px;cursor:pointer;margin-top:3px}
+.nav:hover,.nav.active{background:#1a2338;color:#fff}
+.sidebar-bottom{margin-top:auto}
+.main{flex:1;display:flex;flex-direction:column;min-width:0}
+.topbar{height:64px;border-bottom:1px solid #222a3d;display:flex;align-items:center;justify-content:flex-end;padding:0 24px}
+.mobile-brand{display:none}
+.model-wrap{display:flex;gap:8px;align-items:center;color:#9da8bd;font-size:12px}
+.model-wrap select{background:#141b2c;color:#fff;border:1px solid #303950;border-radius:9px;padding:8px}
+.chat{flex:1;max-width:900px;width:100%;margin:0 auto;padding:38px 22px 120px}
+.welcome{text-align:center;margin:10vh auto}
+.welcome-icon{font-size:40px}
+.welcome h1{font-size:34px;margin:12px 0 6px}
+.welcome p{color:#909bb1}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:600px;margin:28px auto}
+.cards button{padding:15px;border:1px solid #2c354b;background:#121a2c;color:#dfe5f2;border-radius:12px;text-align:left;cursor:pointer}
+.msg{display:flex;gap:12px;margin:20px 0}
+.avatar{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#1a2338;font-size:12px;flex:none}
+.bubble{max-width:80%;line-height:1.6}
+.msg.user .bubble{background:#1a2338;padding:11px 14px;border-radius:14px}
+.composer{position:fixed;bottom:24px;left:calc(250px + (100% - 250px)/2 - 420px);width:840px;max-width:calc(100% - 32px);display:flex;gap:8px;padding:8px;background:#121a2a;border:1px solid #303950;border-radius:16px;box-shadow:0 12px 40px #0006}
+.composer textarea{flex:1;resize:none;background:transparent;color:#fff;border:0;outline:0;padding:11px}
+.send{width:44px;border:0;border-radius:11px;background:#6d5dfc;color:#fff;cursor:pointer}
+.hint{text-align:center;color:#69748b;font-size:11px;padding:0 10px 9px}
+@media(max-width:800px){
+  .sidebar{display:none}.mobile-brand{display:block;margin-right:auto;font-weight:800}
+  .topbar{padding:0 14px}.composer{left:50%;transform:translateX(-50%);width:calc(100% - 20px)}
+  .cards{grid-template-columns:1fr}.welcome h1{font-size:27px}.chat{padding-left:14px;padding-right:14px}.bubble{max-width:88%}
+}
